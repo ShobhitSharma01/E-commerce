@@ -1,0 +1,83 @@
+.Signup{
+  display: flex;
+ min-height: 100vh;
+  background-color: rgb(255, 255, 255);
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+}
+
+.form-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 50px;
+  background-color: white;
+  margin: 50px;
+}
+
+
+.button-group {
+  display: flex;
+  gap: 50px;
+}
+
+.button-group button {
+  height: 40px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  padding: 0 20px;
+}
+.button {
+  width: 100%;
+  display: flex;
+  justify-content: center; 
+  margin-top: 30px;
+}
+
+.Sign {
+  background-color: rgb(247, 127, 111);
+  color: black;
+  font-size: large;
+  padding: 10px 30px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.image {
+  max-width: 100%;
+  height:auto;
+  border-radius: 20px;
+  padding-bottom: 30px;
+}
+label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #000000;
+  width: 80%;
+}
+
+input {
+  height: 40px;
+  width: 50%;
+  padding: 30px;
+  border: none;
+  border-bottom: 1px solid #000000;
+  font-size: 20px;
+  background-color: transparent;
+  outline: none;
+}
+
