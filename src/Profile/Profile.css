@@ -1,0 +1,25 @@
+.profile-container {
+  padding: 40px;
+  text-align: center;
+  font-family:serif;
+}
+
+.table {
+  margin: auto;
+  border-collapse:separate;
+  width: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.table th,
+.table td {
+  border: 5px solid #000000;
+  padding: 12px;
+  text-align: center;
+}
+
+.table th {
+  background-color: #b85959;
+  font-weight: bold;
+  width: 50%;
+}

@@ -18,10 +18,12 @@ interface Product {
   price: number;
   image: string;
 }
+
 const Axios = () => {
   const [cartData, setCartData] = useState<Cart[]>([]);
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
+  const [searchTerm, setSearchTerm] = useState<string>("");
 
   useEffect(() => {
     Promise.all([
@@ -37,7 +39,7 @@ const Axios = () => {
         console.error('Error fetching data:', err);
       })
       .finally(() => {
-        setLoading(false); 
+        setLoading(false);
       });
   }, []);
 
@@ -48,6 +50,7 @@ const Axios = () => {
       </div>
     );
   }
+
   const allCartProducts = cartData.flatMap(cart =>
     cart.products.map(item => ({
       ...item,
@@ -57,11 +60,27 @@ const Axios = () => {
     }))
   );
 
+  const filteredCartProducts = allCartProducts.filter(item => {
+    const product = products.find(p => p.id === item.productId);
+    return product?.title.toLowerCase().includes(searchTerm.toLowerCase());
+  });
+
   return (
     <div className='Main'>
       <h2>All Cart Products</h2>
+
+      <div className="search-container">
+        <input
+          type="text"
+          placeholder="Search by product name..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          className="search-input"
+        />
+      </div>
+
       <div className="data">
-        {allCartProducts.map((item, index) => {
+        {filteredCartProducts.map((item, index) => {
           const product = products.find(p => p.id === item.productId);
           return product ? (
             <div key={`${item.cartId}-${item.productId}-${index}`} className="card">
@@ -69,10 +88,10 @@ const Axios = () => {
               <div>{product.title}</div>
               <div>Qty: {item.quantity}</div>
               <div>Price: ${product.price}</div>
-              <div style={{ fontSize: '12px' }}>Cart ID: {item.cartId}</div>
-              <button>Show Details</button>
+              <div>Cart ID: {item.cartId}</div>
+              <button className='buy'>Buy Now</button>
               <br />
-              <button className="button">Add to Wishlist</button>
+              <button className="button">Add to Cart</button>
             </div>
           ) : (
             <p key={index}>Product not found</p>

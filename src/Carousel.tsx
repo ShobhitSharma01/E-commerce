@@ -48,7 +48,8 @@
 
 // export default CarouselFade;
 import Carousel from 'react-bootstrap/Carousel';
-import "./Home/Home.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import "../src/Home/Home.css";
 
 function UncontrolledExample() {
   return (
@@ -69,8 +70,6 @@ function UncontrolledExample() {
             alt="Second slide"
           />
         <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -80,10 +79,6 @@ function UncontrolledExample() {
             alt="Third slide"
           />
         <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>

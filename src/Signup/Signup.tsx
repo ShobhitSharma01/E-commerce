@@ -1,53 +1,79 @@
 import { useState } from "react";
-import "./Signup.css"
-interface User{
-  email:string;
-  password:any;
-  name:string;
+import { useNavigate } from "react-router-dom";
+import "./Signup.css";
+import axios from "axios";
+
+interface User {
+  id: number;
+  email: string;
+  password: string;
+  name: string;
 }
-const Signup=()=>{
-    const [email,setEmail]=useState<string>("")
-    const [password,setPassword]=useState<any>("")
-    const [name,setName]=useState<string>("")
- const handleSubmit = () => {
-    const userData: User = {
-      email,
-      password,
-      name,
-    };
-    console.log("User Data:", userData);
-    alert("User data submitted! Check the console.");
+const Signup = () => {
+  const [email, setEmail] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
+  const [username, setUserName] = useState<string>("");
+  const [id, setId] = useState<number>();
+  const navigate = useNavigate();
+  const handleSign = async () => {
+    try {
+      const response = await axios.post("https://fakestoreapi.com/users", {
+        id,
+        username,
+        password,
+        email,
+      });
+      console.log("signup succesfully");
+      alert("sign up succesfully");
+      navigate("/");
+    } catch (error) {
+      console.log("error", error);
+      alert(" u cant Sign up");
+    }
   };
+  return (
+    <div className="Signup">
+      <div className="image-container">
+        <img src="/images/sign.jpg" alt="Lady with cart" className="image" />
+      </div>
 
-    return(
-   
- <div className="Signup">
-         <div className="image-container">
-    <img src="/images/cart.jpg" alt="Lady with cart" className="image" />
-  </div>
-  
+      <div className="form-container">
+        <h1>Create an account</h1>
+        <h4>Enter your details below</h4>
 
-        <div className="form-container">
-          <h1>Create an account</h1>
-          <h4>Enter your details below</h4>
+        <label>
+          Name:
+          <input type="text" value={username} placeholder="Name" onChange={(e) => setUserName(e.target.value)} />
+        </label>
 
-<label>Name
-<input type="text" value={name}   placeholder="email" onChange={(e)=>setName(e.target.value)}/>
-</label>
+        <label>
+          Email:
+          <input type="text" value={email} placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
+        </label>
 
-<label>Email
-<input type="text" value={email}   placeholder="email" onChange={(e)=>setEmail(e.target.value)}/>
-</label>
-<label>Password:
-<input type="text" value={password}  placeholder="password" onChange={(e)=>setPassword(e.target.value)}/>
-</label>
-<div className="button">
-    <button className="Sign" onClick={handleSubmit}>Create account</button>
-</div>
+        <label>
+          Password:
+          <input type="password" value={password} placeholder="Password" onChange={(e) => setPassword(e.target.value)} />
+        </label>
+
+        <label>
+          ID
+          <input
+            type="number"
+            value={id}
+            placeholder="ID"
+            onChange={(e) => setId(Number(e.target.value))}
+          />
+        </label>
+
+        <div className="button">
+          <button className="Sign" onClick={handleSign}>
+            Create account
+          </button>
         </div>
-         </div>
-        
-    )
-}
+      </div>
+    </div>
+  );
+};
 
 export default Signup;

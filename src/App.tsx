@@ -1,27 +1,16 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import './App.css';
-import About from './About/About';
-import Contact from './Contact/Contact';
-import Login from './Login/Login';
-import Signup from './Signup/Signup';
-import Navbar from './Navbar/Navbar';
-import Footer from './Footer/Footer';
-import Home from './Home/Home';
-import 'bootstrap/dist/css/bootstrap.min.css';
-
+import PrivateRoutes from "./PrivateRoutes";
+import PublicRoutes from './PublicRoutes';
+import PrivateNavbar from './Navbar/PrivateNavbar';
+import PublicNavbar from './Navbar/PublicNavbar';
 
 function App() {
+  const token = localStorage.getItem("Token"); 
   return (
     <Router>
-      <Navbar />       
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
-      </Routes>
-      <Footer />
+      {token? <PrivateNavbar/> : <PublicNavbar/>}
+      {token ? <PrivateRoutes /> : <PublicRoutes />}
     </Router>
   );
 }
