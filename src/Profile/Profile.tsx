@@ -1,67 +1,46 @@
 import { useEffect, useState } from "react";
 import "./Profile.css";
-import axios from "axios";
-import { useNavigate } from "react-router-dom";
-
 interface User {
-  name: string;
+  name: {
+    firstname: string;
+    lastname: string;
+  };
   email: string;
-  mobileNumber?: string;
+  phone: string;
 }
-
 const Profile = () => {
   const [user, setUser] = useState<User | null>(null);
-  const navigate = useNavigate();
 
   useEffect(() => {
-    const fetchUser = async () => {
-      try {
+    const storedUser = localStorage.getItem("user");
 
-        const response = await axios.get("https://fakestoreapi.com/users/1");
-        const userToken = response.data;
-        if (userToken.token) {
-          localStorage.setItem("Token", userToken.token);
-        }
-        const paerseduser:User={
-          name: userToken.userName,
-          email:userToken.email,
-          mobileNumber:userToken.phone,
-        };
-        setUser(paerseduser);
-    }catch(err){
-      console.log("data is loading",err);
-      navigate("/login");
+    if (storedUser) {
+      const parsedUser = JSON.parse(storedUser);
+      setUser(parsedUser);
     }
-    }
-    fetchUser();
-  },[navigate]);
-
-  if (!user) {
-    return <p>Loading user data...</p>;
-  }
+  }, []);
+  if (!user) return <p>Loading...</p>;
 
   return (
-    <div className="profile-container">
-      <h2>User Profile</h2>
-      <table className="table">
-        <tbody>
-          <tr>
-            <th><strong>Name:</strong></th>
-            <td>{user.name}</td>
-          </tr>
-          <tr>
-            <th>Email:</th>
-            <td>{user.email}</td>
-          </tr>
-          {user.mobileNumber && (
-            <tr>
-              <th>Mobile Number:</th>
-              <td>{user.mobileNumber}</td>
-            </tr>
-          )}
-        </tbody>
-      </table>
-    </div>
+    <div className="profile-card">
+  <h2>User Profile</h2>
+  <img src="/images/user.avif" alt="" />
+
+  <div className="profile-item">
+    <h5>Full Name:</h5>
+    <p>{user.name.firstname} {user.name.lastname}</p>
+  </div>
+  <div className="profile-item">
+    <h5>Email:</h5>
+    <p>{user.email}</p>
+  </div>
+
+  <div className="profile-item">
+    <h5>Phone:</h5>
+    <p>{user.phone}</p>
+  </div>
+</div>
+
   );
 };
 

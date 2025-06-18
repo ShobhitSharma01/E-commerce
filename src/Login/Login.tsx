@@ -10,24 +10,64 @@ const Login = () => {
   const [username, setUserName] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const navigate = useNavigate();
-  const handleSubmit = async () => {
-    try {
-      const response = await axios.post("https://fakestoreapi.com/auth/login", {
-        username,
-        password
-      });
-      const token = response.data.token;
-      console.log("login successful", token)
+//   const handleSubmit = async () => {
+//   try {
+//     const response = await axios.post("https://fakestoreapi.com/auth/login", {
+//       username,
+//       password
+//     });
 
-        localStorage.setItem("Token", token);
-      alert("login successfully");
-      navigate("/");
+//     const token = response.data.token;
+
+//     if (token) {
+//       const userResponse = await axios.get(`https://fakestoreapi.com/users`);
+//       const matchedUser = userResponse.data.find((u: any) => u.username === username);
+
+//       localStorage.setItem("Token", token);
+//       localStorage.setItem("isLoggedIn", "true");
+//       localStorage.setItem("user", JSON.stringify(matchedUser));
+
+//       alert("Login successful");
+//       setTimeout(()=>{
+//  navigate("/");
+//       },2000);
+     
+//     }
+//   } catch (error) {
+//     alert("Login failed");
+//     console.log(error);
+//   }
+// };
+const handleSubmit = async () => {
+  try {
+    const response = await axios.post("https://fakestoreapi.com/auth/login", {
+      username,
+      password
+    });
+
+    const token = response.data.token;
+
+    if (token) {
+      const userResponse = await axios.get(`https://fakestoreapi.com/users`);
+      const matchedUser = userResponse.data.find((u: any) => u.username === username);
+
+      localStorage.setItem("Token", token);
+      localStorage.setItem("isLoggedIn", "true");
+      localStorage.setItem("user", JSON.stringify(matchedUser));
+
+      alert("Login successful");
+
+      setTimeout(() => {
+        navigate("/");
+        window.location.reload();
+      },1000);
     }
-    catch (error) {
-      console.log("error", error);
-      alert("u'cant login");
-    }
-  };
+  } catch (error) {
+    alert("Login failed");
+    console.log(error);
+  }
+};
+
   return (
     <div className="login">
       <div className="image-container">

@@ -10,7 +10,13 @@
   flex-direction: column;
   align-items: center;
   margin-top: 80px;
-  width: 150px;
+  width: 120px;
+}
+.carousel img{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  object-fit: cover;
 }
 
 .Featured img {
@@ -99,21 +105,22 @@
 .help {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  align-items: center;
+  gap: 50px;
   padding: 50px 0;
+  width: 100%;
 }
-
 .help-box {
   flex: 1 1 250px;
-  padding: 6px;
+  padding: 10px;
   text-align: center;
   cursor: pointer;
 }
-
 .help-icons {
-  height: 40px;
+  height: 60px;
   width: auto;
-  margin-bottom: 20px;
+  border-radius: 20px;
+  margin-bottom: 10px;
 }
 
 .carousel .h2 .p {

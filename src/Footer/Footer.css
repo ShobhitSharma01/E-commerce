@@ -16,9 +16,8 @@
 .footer-section,
 .support {
   flex: 1;
-  min-width: 200px;
-  padding: 40px;
-  box-sizing: border-box;
+  font-family: serif;
+  padding: 20px;
 }
 
 .footer-section h3,
@@ -27,15 +26,13 @@
   margin-bottom: 10px;
   color: #eeeeee;
   text-decoration: underline;
+  font-size: 24px;
 }
 
-.footer-section ul {
-  padding: 0;
-}
 
 .footer-section p{
-  padding-top: 30px;
-  font-size: larger;
+  font-family: serif;
+  font-size: 18px;
  
 }
 
@@ -60,31 +57,50 @@
   display: flex;
   flex-direction: column;
   width: 350px;
-  margin-top: 30px;
+  margin: 30px;
+  text-decoration: underline;
+  font-family: serif;
 }
 
-.support {
-  line-height: 1.6;
-}
 .link {
-  display: flex;
-  flex-direction: column;
   flex: 1;
   min-width: 200px;
-  padding: 40px;
   box-sizing: border-box;
+  padding: 20px;
+  font-family: serif;
 }
 
 .link h4 {
   margin-bottom: 10px;
   color: #ffffff;
+  font-size: 24px;
   text-decoration: underline;
+
 }
 
 .link ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 10px; 
+  gap: 15px;
 }
 
+.link li {
+  color: #ffffff;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.link li:hover {
+  color: #f39c12;
+  text-decoration: underline;
+}
+
+.support h4{
+  font-size: 18px;
+}
+.App img{
+  padding-top: 20px;
+}

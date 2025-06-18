@@ -50,25 +50,44 @@ The company expanded rapidly, establishing numerous stores across India.
     <h5>Financial Growth</h5>
   </div>
 </div>
-<div className="team">Our team</div>
-<div className="about-image">
-
-  <div className="about-box">
-    <img src="/images/manp.jpg" alt="man iamge"  className="about-image"/>
+<div className="team">Our Team</div>
+<div className="team-container">
+  <div className="team-card">
+    <img src="/images/manp.jpg" alt="Tom Cruise" className="team-img" />
+    <hr />
     <h2>Tom Cruise</h2>
     <h4>Founder & Chairman</h4>
+    <div className="social-icons">
+      <i className="fab fa-twitter"></i>
+      <i className="fab fa-instagram"></i>
+      <i className="fab fa-linkedin"></i>
+    </div>
   </div>
-  <div className="about-box">
-    <img src="/images/womenpro.jpg" alt="women image" className="about-image"/>
+
+  <div className="team-card">
+    <img src="/images/womenpro.jpg" alt="Emma Watson" className="team-img" />
+    <hr />
     <h2>Emma Watson</h2>
     <h4>Managing Director</h4>
+    <div className="social-icons">
+      <i className="fab fa-twitter"></i>
+      <i className="fab fa-instagram"></i>
+      <i className="fab fa-linkedin"></i>
+    </div>
   </div>
-  <div className="about-box">
-  <img src="/images/manpro.jpeg" alt="man iamge" className="about-image"/>
-  <h2>Will Smith</h2>
-  <h4>Product Designer</h4>
+  <div className="team-card">
+    <img src="/images/manpro.jpeg" alt="Will Smith" className="team-img" />
+    <hr />
+    <h2>Will Smith</h2>
+    <h4>Product Designer</h4>
+    <div className="social-icons">
+      <i className="fab fa-twitter"></i>
+      <i className="fab fa-instagram"></i>
+      <i className="fab fa-linkedin"></i>
+    </div>
   </div>
 </div>
+
 <div className="help">
      <div className="help-box">
     <img src="/images/transportation.png" alt="busimage" className="help-icons" />
