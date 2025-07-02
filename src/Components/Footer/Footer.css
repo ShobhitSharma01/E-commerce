@@ -1,0 +1,183 @@
+.footer {
+  background-color: #0e0d0d;
+  color: #ffffff;
+  padding: 40px;
+  font-family: sans-serif;
+  cursor: pointer;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.footer-content :hover{
+  color: #a33825;
+  text-decoration: underline;
+}
+.footer-section,
+.support {
+  flex: 1;
+  font-family: serif;
+  padding: 20px;
+}
+
+.footer-section h3,
+.footer-section h4,
+.support h3 {
+  margin-bottom: 10px;
+  color: #eeeeee;
+  text-decoration: underline;
+  font-size: 24px;
+}
+
+
+.footer-section p{
+  font-family: serif;
+  font-size: 18px;
+ 
+}
+
+.social-icons img {
+  width: 24px;
+  margin-right: 10px;
+  cursor: pointer;
+  filter: brightness(0.8);
+  color: #e9e5e5;
+  background-color: #e9e5e5;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #444;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  margin: 30px;
+  text-decoration: underline;
+  font-family: serif;
+}
+
+.link {
+  flex: 1;
+  min-width: 200px;
+  box-sizing: border-box;
+  padding: 20px;
+  font-family: serif;
+ 
+}
+
+.link h4 {
+  margin-bottom: 10px;
+  color: #ffffff;
+  font-size: 24px;
+  text-decoration: underline;
+
+}
+
+.link ul {
+  list-style: none;
+  /* padding: 0; */
+  /* margin: 0; */
+  display: flex;
+  flex-direction: column;
+   gap: 15px;
+   padding-left: 15px;
+}
+
+.link li {
+  align-items: start;
+  color: #ffffff;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.link li:hover {
+  color: #b43c1e;
+  text-decoration: underline;
+}
+
+.support h4{
+  font-size: 18px;
+}
+
+.support:hover {
+  color: #c22d19;
+  text-decoration: underline;
+}
+
+
+.App img{
+  padding-top: 20px;
+}
+.footer-logo{
+  color: white;
+}
+.supprt{
+  color: white;
+}
+.App h2{
+  font-size: 25px;
+  color: gainsboro;
+}@media(max-width: 786px){
+  .footer {
+    flex-direction: column;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .link ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0;
+    margin: 0;
+  }
+
+  .link li {
+    text-align: center;
+    width: 100%;
+    padding-right: 30px;
+  }
+
+  .link {
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .link h4 {
+    text-align: center;
+  }
+
+  .footer-section,
+  .support,
+  .link,
+  .App {
+    padding-top: 10px;
+    margin: 0;
+    width: 100%;
+    align-items: center;
+  }
+
+  .App {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}

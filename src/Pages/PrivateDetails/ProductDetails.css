@@ -1,0 +1,54 @@
+.add-container {
+  width: 100vw;
+  margin: 40px auto;
+  padding: 24px;
+  border-radius: 12px;
+  font-family: serif;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.add-container img {
+  width: 250px;
+  height: auto;
+  margin: 0 auto 24px;
+  display: block;
+}
+
+.add-container h2 {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.add-container p {
+  font-size: 20px;
+  margin-bottom: 12px;
+  padding: 0 20px;
+}
+
+.add-container .price {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 16px 0;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.button-group button {
+  background-color: #b60f0f;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.button-group button:hover {
+  background-color: #5f0505;
+}

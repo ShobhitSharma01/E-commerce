@@ -1,0 +1,186 @@
+body {
+  overflow-x: hidden;
+  background-color: #ffffff;
+}
+
+.Main {
+  background-color: #ffffff;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.page-wrapper2 {
+  position: relative;
+  padding-top: 60px;
+  text-align: center;
+}
+
+.heading-container {
+  font-size: 28px;
+  font-weight: 600;
+  margin: 30px 0;
+  color: #222;
+  font-family: serif;
+}
+
+.data {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  padding: 20px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  width: 100%;
+  height: 550px;
+  scroll-behavior: smooth;
+}
+
+.data::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  flex: 0 0 auto;
+  width: 500px;
+  background-color: rgba(235, 231, 231, 0.5);
+  border: 2px solid #161616;
+  border-radius: 12px;
+  padding-bottom: 15px;
+  text-align: center;
+  overflow: hidden;
+  box-sizing: border-box;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card img {
+  height: 250px;
+  width: 150px;
+  object-fit: contain;
+  margin: auto;
+  display: block;
+  padding-top: 8px;
+}
+
+.title {
+  font-family: serif;
+  font-size: 20px;
+  padding: 10px 0;
+  color: #222;
+}
+
+.title:hover {
+  color: #a53232;
+}
+
+.description {
+  font-family: sans-serif;
+  font-size: 16px;
+  padding: 5px 10px;
+  color: #333;
+}
+
+.description:hover {
+  color: rgb(112, 13, 13);
+}
+
+.price {
+  font-family: serif;
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.button button {
+  background-color: #a52a2a;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.button button:hover {
+  background-color: #df463b;
+}
+
+.button button:focus {
+  outline: none;
+}
+
+.loading-overlay {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.spin-icon {
+  animation: spin 1s linear infinite;
+}
+
+@media (max-width: 786px) {
+  .Main {
+    padding: 20px;
+  }
+
+  .heading-container {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+
+  .data {
+    padding: 10px;
+    gap: 20px;
+    height: auto;
+  }
+
+  .card {
+    width: 90vw;
+    margin-bottom: 20px;
+    justify-content: center;
+  }
+
+  .card img {
+    height: 150px;
+    padding-left: 50px;
+    width: auto;
+  }
+
+  .button {
+    gap: 10px;
+  }
+
+  .title {
+    font-size: 16px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .price {
+    font-size: 18px;
+  }
+}

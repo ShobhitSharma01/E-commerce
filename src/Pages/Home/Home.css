@@ -1,0 +1,179 @@
+
+.Featured img {
+  width: 90%;
+  height: 440px;
+  object-fit: cover;
+  margin: 80px auto 0 auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.Featured {
+  width: 85%;
+  margin: 60px auto;
+  text-align: left;
+}
+
+.Featured h2 {
+  font-size: 40px;
+  font-family: serif;
+  margin-left: 8px;
+  font-weight: 500;
+  padding-left: 20px;
+  text-align: left;
+  color: rgb(22, 20, 20);
+  text-decoration: underline;
+}
+
+.categories {
+  width: 80%;
+  margin: 60px auto;
+  text-align: left;
+}
+
+.categories h2,
+.month h2 {
+  font-size: 40px;
+  font-family: serif;
+  margin-bottom: 30px;
+  font-weight: 500;
+  padding-right: 20px;
+  color: rgb(22, 20, 20);
+  text-decoration: underline;
+}
+
+.headings h6 {
+  font-style: italic;
+  color: brown;
+  margin-right: 40px;
+  border-left: 20px solid rgb(161, 74, 74);
+  padding-left: 10px;
+  font-size: 20px;
+  font-weight: 900;
+  border-radius: 20px;
+}
+
+.category-banner img {
+  width: 85%;
+  height: 350px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-left: 100px;
+  padding-top: 30px;
+}
+
+.help {
+  display: flex;
+  justify-content: center;
+  width: 95%;
+  margin: 120px auto;
+  padding-left: 60px;
+  gap: 20px;
+}
+
+.help-box {
+  flex: 1 1 250px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.help-icons {
+  height: 80px;
+  width: auto;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.help-box h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.help-box h5 {
+  font-size: 14px;
+  font-weight: 400;
+  color: #555;
+}
+
+.month {
+  width: 80%;
+  margin: 60px auto;
+  text-align: left;
+  font-family: serif;
+  padding-top: 30px;
+}
+
+.Featured .headings h6 {
+  margin-left: 20px;
+}
+
+.help-box img {
+  height: 50px;
+}
+
+.headings img {
+  height: 500px;
+  object-fit: fill;
+  display: block;
+  margin: auto;
+}
+
+@media (max-width: 786px) {
+ 
+
+  .Featured,
+  .categories,
+  .month {
+    width: 95%;
+    margin: 30px auto;
+  }
+
+  .categories h2,
+  .month h2,
+  .Featured h2 {
+    font-size: 26px;
+    padding-left: 10px;
+  }
+
+  .headings h6 {
+    font-size: 16px;
+    padding-left: 8px;
+    border-left: 10px solid rgb(161, 74, 74);
+  }
+
+  .category-banner img {
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .help {
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0;
+    margin: 60px 10px;
+  }
+
+  .help-box {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .headings img {
+    height: auto;
+    width: 50%;
+    margin-left: 70px;
+  }
+  .headings2 img{
+
+    width: 100%;
+    /* padding: 10px; */
+    height: 200px;
+    object-fit: fill;
+  }
+  
+}
