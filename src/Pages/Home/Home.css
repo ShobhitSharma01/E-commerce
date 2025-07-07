@@ -2,7 +2,7 @@
 .Featured img {
   width: 90%;
   height: 440px;
-  object-fit: cover;
+  object-fit: fill;
   margin: 80px auto 0 auto;
   display: block;
   border-radius: 8px;
@@ -36,7 +36,7 @@
 .month h2 {
   font-size: 40px;
   font-family: serif;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   font-weight: 500;
   padding-right: 20px;
   color: rgb(22, 20, 20);
@@ -54,6 +54,17 @@
   border-radius: 20px;
 }
 
+
+.headings2 h6 {
+  font-style: italic;
+  color: brown;
+  border-left: 20px solid rgb(161, 74, 74);
+  padding-left: 10px;
+  font-size: 20px;
+  font-weight: 900;
+  border-radius: 20px;
+  margin-left: 30px;
+}
 .category-banner img {
   width: 85%;
   height: 350px;
@@ -116,7 +127,7 @@
 
 .headings img {
   height: 500px;
-  object-fit: fill;
+  object-fit: contain;
   display: block;
   margin: auto;
 }
@@ -162,17 +173,21 @@
     width: 100%;
     max-width: 300px;
   }
+  .headings {
+    display: flex;
+    justify-content: center;
+  }
 
   .headings img {
     height: auto;
     width: 50%;
-    margin-left: 30px;
+    padding: 30px;
   }
   .headings2 img{
 
     width: 100%;
     /* padding: 10px; */
-    height: 200px;
+    height: 300px;
     object-fit: fill;
   }
   

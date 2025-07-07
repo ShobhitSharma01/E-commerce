@@ -49,16 +49,18 @@ const Products = () => {
     return cart.some(item => item.id === id.toString());
   };
 
-  const handleAddToCart = (product: Product) => {
-    const cartItem = {
-      id: product.id.toString(),
-      description: product.description,
-      price: product.price.toString(),
-      image: product.image,
-      title: product.title,
-    };
-    dispatch(addToCart(cartItem));
+ const handleAddToCart = (product: Product) => {
+  const cartItem = {
+    id: product.id.toString(),
+    description: product.description,
+    price: product.price.toString(),
+    image: product.image,
+    title: product.title,
+    quantity: 1, 
   };
+  dispatch(addToCart(cartItem));
+};
+
 
   if (loading) {
     return (

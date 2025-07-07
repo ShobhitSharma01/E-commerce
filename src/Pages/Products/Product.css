@@ -45,11 +45,11 @@ body {
 
 .card {
   flex: 0 0 auto;
-  width: 500px;
+  margin-bottom: 10px;
+  width: 350px;
   background-color: rgba(235, 231, 231, 0.5);
   border: 2px solid #161616;
   border-radius: 12px;
-  padding-bottom: 15px;
   text-align: center;
   overflow: hidden;
   box-sizing: border-box;
@@ -157,16 +157,18 @@ body {
   }
 
   .card {
-    width: 90vw;
+    width: 350px;
     margin-bottom: 20px;
+    display: flex;
     justify-content: center;
+    
+
   }
 
   .card img {
     height: 150px;
     padding-left: 50px;
-    width: auto;
-  }
+    }
 
   .button {
     gap: 10px;

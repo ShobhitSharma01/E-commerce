@@ -54,7 +54,7 @@ const Categories = () => {
             onClick={() => navigate(`/category/${data.name}`)}
             >
             <img src={data.image} alt={data.name} />
-            <h5 className="formatimg">{formatCategory(data.name)} Category</h5>
+            <h5 className="formatimg">{formatCategory(data.name)}</h5>
           </div>
         ))}
       </div>

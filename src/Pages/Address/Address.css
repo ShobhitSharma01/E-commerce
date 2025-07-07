@@ -3,8 +3,8 @@
 .page-wrapper {
   position: relative;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: start;
+  /* justify-content: center; */
   min-height: 100vh; 
   background-color: #ffffff;
 }

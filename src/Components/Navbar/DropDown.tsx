@@ -28,17 +28,19 @@ const DropDown = () => {
 
   const handleSelect = (option: Option | null) => {
     
-    if (option) navigate(`/category/${option.value}`);
+    if (option) navigate(`/category/${option.value } `);
   };
 
   return (
     <div className="search-dropdown">
-      <Select
+      <Select 
         options={options}
+        
         onChange={handleSelect}
         isClearable
         placeholder="Select category...."
-      />
+        classNamePrefix="custom-select"
+       />
     </div>
   );
 };

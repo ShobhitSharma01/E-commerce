@@ -11,8 +11,7 @@ const PrivateNavbar = () => {
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
   const [userName, setUserName] = useState<string>("");
 
-  const cartCount = useSelector((state: RootState) => state.cart.cart.length);
-
+  const cartCount = useSelector((state: RootState)=>state.cart.cart.reduce((total,item)=>total+item.quantity,0));
   useEffect(() => {
     const loggedIn = localStorage.getItem("isLoggedIn") === "true";
     const user = localStorage.getItem("user");
@@ -63,14 +62,31 @@ const PrivateNavbar = () => {
         <div className='dropdown-container'>
           <DropDown />
         </div>
-        <div className="cart-icon">
+        {/* <div className="cart-wrapper">
 <img
   src="/images/caert.png"
   alt="cart"
   className="heart"
   onClick={() => navigate("/cart")}
 />
- </div>
+ </div> */}
+ {/* <div className="cart-wrapper" onClick={() => navigate("/cart")}>
+  <img
+    src="/images/caert.png"
+    alt="cart"
+    className="heart"
+  />
+  {cartCount > 0 && <span className="cart-badge">{cartCount}</span>}
+</div> */}
+<div className="cart-wrapper" onClick={() => navigate("/cart")}>
+  <img
+    src="/images/caert.png"
+    alt="cart"
+    className="cart-icon"
+  />
+  {cartCount > 0 && <div className="cart-badge">{cartCount}</div>}
+</div>
+
 
         </div>
       </div>

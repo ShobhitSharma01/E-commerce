@@ -33,7 +33,7 @@ const Home = () => {
           <h6>Featured</h6>
           <h2>New Arrival</h2>
        
-        <img src="/images/j.jpg" alt="play" />
+        <img src="/images/f.webp" alt="play" />
       </div>
        </div >
 

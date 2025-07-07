@@ -5,12 +5,12 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
-import { useDispatch } from "react-redux"; // ✅ fixed import
+import { useDispatch } from "react-redux"; 
 import { clearCart } from "../../Redux/CartSlice";
 
 const Address = () => {
   const navigate = useNavigate();
-  const dispatch = useDispatch(); // ✅ get dispatch hook
+  const dispatch = useDispatch(); 
 
   const [name, setName] = useState("");
   const [address, setAddress] = useState("");

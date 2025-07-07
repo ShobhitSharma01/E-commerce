@@ -6,6 +6,9 @@ import "./ProductDetails.css";
 import Rating from '@mui/material/Rating';
 import Box from '@mui/material/Box';
 import StarIcon from '@mui/icons-material/Star';
+import {  addToCart,clearCart } from "../../Redux/CartSlice";
+import { useDispatch} from "react-redux";
+
 
 interface Product {
   id: number;
@@ -20,10 +23,13 @@ interface Product {
   };
 }
 
+
 const ProductDetail = () => {
   const [product, setProduct] = useState<Product>();
   const { id } = useParams();
+  
 const navigate=useNavigate();
+const dispatch=useDispatch();
   useEffect(() => {
     if (id) {
       axios
@@ -32,6 +38,21 @@ const navigate=useNavigate();
         .catch((err) => console.error("Error fetching product:", err));
     }
   }, [id]);
+const handleBuyNow = () => {
+  if (product) {
+    dispatch(clearCart());
+    dispatch(addToCart({
+      id: product.id.toString(),
+      title: product.title,
+      description: product.description,
+      price: product.price.toString(),
+      image: product.image,
+      quantity: 1,
+    }));
+    navigate("/cart");
+  }
+};
+
 
   return (
     <div className="add-container">
@@ -60,7 +81,7 @@ const navigate=useNavigate();
           <p>Price: ₹{product.price}</p>
 
           <div className="button-group">
-            <button>Buy Now</button>
+            <button onClick={handleBuyNow}>Buy Now</button>
             <button>Add to cart</button>
           </div>
         </div>
