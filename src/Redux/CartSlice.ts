@@ -23,8 +23,6 @@ export interface CartItem {
   price: string;
   image: string;
 }
-
-
 const cartSlice = createSlice({
   name: "cart",
   initialState,

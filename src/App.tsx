@@ -5,7 +5,7 @@ import PublicRoutes from './Routes/PublicRoutes';
 import PrivateNavbar from './Components/Navbar/PrivateNavbar';
 import PublicNavbar from './Components/Navbar/PublicNavbar';
 import { useEffect } from 'react';
-import Sidebar from './SideBar';
+import Sidebar from './Pages/Slidebar/SideBar';
 
 function App() {
   const token = localStorage.getItem("Token"); 

@@ -1,7 +1,7 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
-import { RootState } from "../../Redux/Store"; 
+import { RootState } from "../../Redux/Store";
 import "./Navbar.css";
 import Cart from '../../Pages/Cart/Cart';
 import DropDown from './DropDown';
@@ -70,11 +70,10 @@ const PrivateNavbar = () => {
   className="heart"
   onClick={() => navigate("/cart")}
 />
-
+ </div>
 
         </div>
       </div>
-    </div>
   );
 };
 

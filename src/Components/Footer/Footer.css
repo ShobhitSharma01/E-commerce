@@ -59,7 +59,7 @@
 .App {
   display: flex;
   flex-direction: column;
-  width: 350px;
+  width:250px;
   margin: 30px;
   text-decoration: underline;
   font-family: serif;
@@ -116,6 +116,7 @@
 
 .App img{
   padding-top: 20px;
+
 }
 .footer-logo{
   color: white;
@@ -172,9 +173,10 @@
     align-items: center;
   }
 
-  .App {
+  .App img{
     justify-content: center;
     align-items: center;
+    width: 240px;
   }
 
   .social-icons {

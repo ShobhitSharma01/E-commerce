@@ -1,4 +1,3 @@
-
 .noData {
   height:50%;
   display: flex;
@@ -148,3 +147,69 @@ align-items: center; */
   align-items: center;
   justify-content:center;
 }
+@media (max-width: 786px) {
+  .noData img {
+    width: 200px;
+    display: flex;
+    object-fit: contain;
+  }
+
+  .noData h1 {
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .back-inside-wrapper button {
+    width: 80px;
+    height: 35px;
+    font-size: 14px;
+  }
+  .cart-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .cart-item img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .item-details {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .item-details h3,
+  .item-details p,
+  .item-details h6 {
+    text-align: center;
+  }
+
+  .quantity-controls {
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .quantity-controls button {
+    margin: 10px;
+  }
+
+  .place button {
+    width: 100%;
+    max-width: 200px;
+    margin: 20px auto 0;
+
+
+    
+  }
+  .place{
+    display: flex;
+    justify-content: center;
+
+  }
+}
+

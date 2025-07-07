@@ -91,6 +91,11 @@ input {
   width: 100%;
   padding: 8px 4px;
 }
+
+.image-container img{
+height: 60vh;
+
+}
 @media (max-width: 786px) {
   .login {
     flex-direction: column;
@@ -107,7 +112,7 @@ input {
   .button-group {
     margin: 0;
     text-align: center;
-
+    
   }
   .forget h1 {
     margin-bottom: 20px;

@@ -15,7 +15,7 @@
   padding-bottom: 10px;
   background-color: white;
   max-width: 500px;
-  margin-right: 10px;
+  margin-right: 100px;
 }
 
 .button-group {
@@ -34,7 +34,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .Sign {
@@ -52,18 +52,17 @@
   flex: 1;
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding-right: 50px;
+  /* padding-right: 50px; */
    width: 100%;
+   
   height: 100%;
 }
 
-.image {
+ .image-container  img{
   width: 100%;
   height: 80vh;
-  width: auto;
-  height: auto;
   object-fit: contain;
+  margin-bottom: 20px;
 }
 
 
@@ -111,7 +110,7 @@ label {
     min-height: auto; 
   }
   .form-container {
-    margin-bottom: 0;
+    margin-right: 0;
     padding-bottom: 0;
     width: 100%;
   }

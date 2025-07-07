@@ -33,6 +33,7 @@ const Profile = () => {
       </div>
 
       <div className="profile-card">
+        <button className="edit">Edit</button>
         <h2>User Profile</h2>
         <img src="/images/user.avif" alt="User" />
 
