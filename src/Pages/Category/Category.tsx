@@ -45,8 +45,7 @@ const Categories = () => {
   };
   return (
     <div className="category-container">
-      <h2></h2>
-      <div className="category-grid">
+      <div className="category-gridd">
         {categoryCards.map((data) => (
           <div
             key={data.name}

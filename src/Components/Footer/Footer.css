@@ -12,10 +12,13 @@
   flex-wrap: wrap;
   gap: 20px;
 }
-.footer-content :hover{
-  color: #a33825;
-  text-decoration: underline;
+
+.footer-content :hover {
+  color: #d4d2d1;
+
+   text-decoration: underline;
 }
+
 .footer-section,
 .support {
   flex: 1;
@@ -33,10 +36,10 @@
 }
 
 
-.footer-section p{
+.footer-section p {
   font-family: serif;
   font-size: 18px;
- 
+
 }
 
 .social-icons img {
@@ -59,22 +62,38 @@
 .App {
   display: flex;
   flex-direction: column;
-  width:250px;
+  width: 250px;
   margin: 30px;
   text-decoration: underline;
   font-family: serif;
 }
 
-.link {
+.link1 {
   flex: 1;
   min-width: 200px;
   box-sizing: border-box;
   padding: 20px;
   font-family: serif;
- 
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-family: serif;
+    color: white;
+  }
+
+  ul li a {
+    color: #ffffff !important;
+    text-decoration: none;
+  }
+
 }
 
-.link h4 {
+.link1 h4 {
   margin-bottom: 10px;
   color: #ffffff;
   font-size: 24px;
@@ -82,52 +101,65 @@
 
 }
 
-.link ul {
-  list-style: none;
-  /* padding: 0; */
-  /* margin: 0; */
-  display: flex;
-  flex-direction: column;
-   gap: 15px;
-   padding-left: 15px;
-}
+
 
 .link li {
   align-items: start;
   color: #ffffff;
-  font-size: 16px;
+  font-size: 15px;
   transition: color 0.3s ease;
+  text-decoration: none;
+  text-align: start;
 }
 
-.link li:hover {
-  color: #b43c1e;
-  text-decoration: underline;
+.link1 li:hover {
+  color: #cecccc;
+  /* text-decoration: underline; */
 }
 
-.support h4{
+.support h4 {
   font-size: 18px;
+  text-decoration: none;
+
 }
 
 .support:hover {
-  color: #c22d19;
+  color: #dad5d5;
   text-decoration: underline;
 }
 
 
-.App img{
+.App img {
   padding-top: 20px;
 
 }
-.footer-logo{
+
+.footer-logo {
   color: white;
 }
-.supprt{
+
+.supprt {
   color: white;
 }
-.App h2{
+
+.App h2 {
   font-size: 25px;
   color: gainsboro;
-}@media(max-width: 786px){
+}
+.link1 ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 18px;
+  font-family: serif;
+}
+
+.link1 ul li a:hover {
+  color: #b43c1e; 
+  text-decoration: underline;
+}
+
+@media(max-width: 786px) {
   .footer {
     flex-direction: column;
   }
@@ -138,7 +170,7 @@
     text-align: center;
   }
 
-  .link ul {
+  .link1 ul {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -146,26 +178,31 @@
     margin: 0;
   }
 
-  .link li {
-    text-align: center;
+  .link1 li {
+    text-align: start;
     width: 100%;
     padding-right: 30px;
   }
 
-  .link {
+  .link1 {
     text-align: center;
     width: 100%;
     margin: 0;
     padding: 0;
+
+    ul li {
+      width: fit-content !important;
+      padding: 0 !important;
+    } 
   }
 
-  .link h4 {
+  .link1 h4 {
     text-align: center;
   }
 
   .footer-section,
   .support,
-  .link,
+  .link1,
   .App {
     padding-top: 10px;
     margin: 0;
@@ -173,7 +210,7 @@
     align-items: center;
   }
 
-  .App img{
+  .App img {
     justify-content: center;
     align-items: center;
     width: 240px;

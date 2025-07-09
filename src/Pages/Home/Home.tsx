@@ -1,7 +1,7 @@
-import Axios from "../Products/product";
 import UncontrolledExample from "../../Components/Crousel/Carousel";
 import "./Home.css";
 import Categories from "../Category/Category";
+import ProductList from "../../ProductList/ProductList";
 
 const Home = () => {
   return (
@@ -13,7 +13,7 @@ const Home = () => {
         <div className="headings">
           <h6>This month</h6>
        <h2>Best selling Products</h2>
-       <Axios/>
+       <ProductList/>
       </div>
       </div>
       <div className="categories">

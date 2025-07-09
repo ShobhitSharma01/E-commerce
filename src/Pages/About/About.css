@@ -24,6 +24,7 @@
 .about-container h1{
   font-weight: 900;
   font-family: serif;
+  width: fit-content;
   color: rgb(172, 68, 68);
   text-decoration: underline;
   margin-bottom: 5px;
@@ -151,6 +152,7 @@
   color: rgb(172, 68, 68);
   font-weight: 800;
   cursor: pointer; 
+  width: fit-content;
 }
 
 .growth:hover {
@@ -169,6 +171,7 @@
   color: rgb(172, 68, 68);
   font-weight: 800;
   cursor: pointer;
+  width: fit-content;
 }
 .team:hover{
     color: #851d1d;

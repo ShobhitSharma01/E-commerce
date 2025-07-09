@@ -37,7 +37,7 @@ const Signup = () => {
         <img src="/images/ChatGPT Image Jun 25, 2025, 08_41_20 AM.png" alt="Lady with cart" className="image" />
       </div>
 
-      <div className="form-container">
+      <div className="form-container2">
         <h1>Create an account</h1>
         <h4>Enter your details below</h4>
 

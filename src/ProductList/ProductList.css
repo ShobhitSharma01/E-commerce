@@ -3,7 +3,7 @@ body {
   background-color: #ffffff;
 }
 
-.product-Main {
+.main {
   background-color: #ffffff;
   padding: 40px;
   display: flex;
@@ -28,7 +28,7 @@ body {
  
 }
 
-.product-data {
+.data-list {
   display: flex;
   flex-direction: row;
   gap: 40px;
@@ -41,11 +41,11 @@ body {
   scroll-behavior: smooth;
 }
 
-.product-data::-webkit-scrollbar {
+.data::-webkit-scrollbar {
   display: none;
 }
 
-.card {
+.list-card {
   flex: 0 0 auto;
   margin-bottom: 40px;
   margin-left: 30px;
@@ -61,11 +61,11 @@ body {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.card:hover {
+.list-card:hover {
   transform: scale(1.02);
 }
 
-.card img {
+.list-card img {
   height: 250px;
   width: 150px;
   object-fit: contain;
@@ -102,7 +102,7 @@ body {
   margin: 10px 0;
 }
 
-.button {
+.list-button {
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -110,7 +110,7 @@ body {
   margin-top: 10px;
 }
 
-.button button {
+.list-button button {
   background-color: #a52a2a;
   color: white;
   border: none;
@@ -122,11 +122,11 @@ body {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
-.button button:hover {
+.list-button button:hover {
   background-color: #df463b;
 }
 
-.button button:focus {
+.list-button button:focus {
   outline: none;
 }
 
@@ -142,49 +142,69 @@ body {
 .spin-icon {
   animation: spin 1s linear infinite;
 }
-
 @media (max-width: 786px) {
-  .Main {
-    padding: 20px;
+  .main {
+    padding: 10px;
   }
 
   .heading-container {
-    font-size: 20px;
-    margin-top: 10px;
+    font-size: 22px;
+    margin: 20px 0;
+    padding-left: 0;
+    text-align: center;
   }
 
-  .data {
+  .data-list {
+    flex-direction: row;
+    gap: 16px;
     padding: 10px;
-    gap: 20px;
-    height: auto;
-    /* margin-left: 80px; */
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    scroll-snap-type: x mandatory;
   }
 
-  .card {
-    width:300px;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
+  .list-card {
+    flex: 0 0 auto;
+    width: 250px;
+    margin: 0;
+    scroll-snap-align: start;
+    display: inline-block;
+    height: 440px;
   }
 
-  .card img {
-    height: 150px;
-    padding-left: 50px;
-    }
-
-  .button {
-    gap: 10px;
+  .list-card img {
+    height: 200px;
+    width: auto;
+    padding-top: 10px;
+    display: block;
+    margin: 0 auto;
   }
 
   .title {
     font-size: 16px;
+    padding: 8px 10px;
   }
 
   .description {
-    font-size: 14px;
+    font-size: 13px;
+    padding: 5px 10px;
   }
 
   .price {
-    font-size: 18px;
+    font-size: 16px;
+    margin: 8px 0;
+  }
+
+  .list-button {
+    flex-direction: column;
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .list-button button {
+    width: 90%;
+    font-size: 14px;
+    padding: 8px;
   }
 }

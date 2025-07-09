@@ -18,7 +18,7 @@ function UncontrolledExample() {
       <Carousel.Item>
         <img
           className="carousel-image"
-          src="/images/3.jpg"
+          src="/images/sale.webp"
           alt="Banner Slide"
         />
         <Carousel.Caption>
@@ -48,7 +48,7 @@ function UncontrolledExample() {
       <Carousel.Item>
         <img
           className="carousel-image"
-          src="/images/i.jpg"
+          src="/images/game.jpeg"
           alt="Sale"
         />
         <Carousel.Caption>

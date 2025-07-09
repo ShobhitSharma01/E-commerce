@@ -7,14 +7,12 @@
   background-color: #ffffff;
   text-align: center;
 }
-
 .add-container img {
   width: 250px;
   height: auto;
   margin: 0 auto 24px;
   display: block;
 }
-
 .add-container h2 {
   font-size: 24px;
   margin-bottom: 16px;
@@ -38,7 +36,6 @@
   gap: 25px;
   margin-top: 20px;
 }
-
 .button-group button {
   background-color: #b60f0f;
   color: white;
@@ -48,7 +45,6 @@
   cursor: pointer;
   font-size: 14px;
 }
-
 .button-group button:hover {
   background-color: #5f0505;
 }

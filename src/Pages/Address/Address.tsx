@@ -50,7 +50,7 @@ const Address = () => {
       <div className="back-inside-wrapper">
   <button onClick={() => navigate(-1)}>Back</button>
 </div>
-      <div className="form-containerr">
+      <div className="form-container5">
         
         <img src="/images/location.png" alt="location image" />
         <h1>Enter Delivery Address</h1>
@@ -97,7 +97,7 @@ const Address = () => {
             </Typography>
 
             <Typography sx={{ fontSize: "16px", mb: 4 }}>
-              Your address has been saved. Redirecting to the page...
+              Your address has been saved. Redirecting to the Home page...
             </Typography>
 
             <Button

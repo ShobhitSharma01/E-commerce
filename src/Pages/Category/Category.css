@@ -18,12 +18,12 @@
   font-size: 35px;
   font-family: serif;
   text-decoration: underline;
-  color: #333;
+  color: #972222;
   margin: 40px 30px;
   text-transform: capitalize;
 }
 
-.category-grid {
+.category-gridd {
   display: flex;
   gap: 20px;
   overflow-x: auto;
@@ -32,7 +32,7 @@
   -webkit-overflow-scrolling: touch;
 }
 
-.category-grid::-webkit-scrollbar {
+.category-gridd::-webkit-scrollbar {
   display: none;
 }
 
@@ -77,7 +77,7 @@
     padding: 20px 10px;
   }
 
-  .category-grid {
+  .category-gridd {
     gap: 15px;
   }
 

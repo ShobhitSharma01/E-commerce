@@ -73,7 +73,7 @@ const handleSubmit = async () => {
       <div className="image-container">
         <img src="/images/log.avif" alt="user login" className="image" />
       </div>
-      <div className="form-container">
+      <div className="form-container2">
         <h1>Log in to Bin.Mart</h1>
         <h3>Enter your details below</h3>
 

@@ -18,12 +18,12 @@ const Footer = () => {
           </p>
         </div>
 
-        <div className="link">
+        <div className="link1">
           <h4>Quick Links</h4>
           <ul>
-          <Link to="/home"><li>Home</li></Link>  
-           <Link to="/about"><li>About</li></Link> 
-            <Link to="/contact"><li>Contact</li></Link>
+          <li><Link to="/home">Home</Link>  </li>
+          <li> <Link to="/about">About</Link> </li>
+           <li> <Link to="/contact">Contact</Link></li>
           </ul>
         </div>
         <div className="support">
@@ -32,7 +32,7 @@ const Footer = () => {
                 DH 1515 ,Noida.
             </h4>
             <h4>binmart@gmail.com</h4>
-            <h5>+88015-904589-12340</h5>
+            <h4>+88015-904589-12340</h4>
             </Link>
 
         </div>

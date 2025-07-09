@@ -51,7 +51,7 @@ const Contact = () => {
         </div>
       </div>
 
-      <div className="form-container">
+      <div className="form-container3">
         <div className="input-row">
           <input
             type="text"
